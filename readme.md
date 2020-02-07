@@ -1,0 +1,3 @@
+# Redis geospatial playing around....
+
+Hosting with Docker Compose
