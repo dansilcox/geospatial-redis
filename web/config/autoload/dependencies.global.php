@@ -20,7 +20,7 @@ return [
         ],
         // Use 'factories' for services provided by callbacks/factory classes.
         'factories'  => [
-            // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
+            // Fully\Qualified\InterfaceName::class => Fully\Qualified\ClassName::class,
         ],
     ],
 ];

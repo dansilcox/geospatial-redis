@@ -5,6 +5,9 @@ declare(strict_types=1);
 use Mezzio\Application;
 use Mezzio\MiddlewareFactory;
 use Psr\Container\ContainerInterface;
+use App\Handler\Ping as PingHandler;
+use App\Handler\GetAll as GetAllHandler;
+use App\Handler\Add as AddHandler;
 
 /**
  * Setup routes with a single request method:
@@ -33,6 +36,8 @@ use Psr\Container\ContainerInterface;
  * );
  */
 return function (Application $app, MiddlewareFactory $factory, ContainerInterface $container) : void {
-    $app->get('/', App\Handler\HomePageHandler::class, 'home');
-    $app->get('/api/ping', App\Handler\PingHandler::class, 'api.ping');
+    $app->get('/', GetAllHandler::class, 'getAll');
+    $app->post('/', AddHandler::class, 'create');
+
+    $app->get('/ping', PingHandler::class, 'ping');
 };
