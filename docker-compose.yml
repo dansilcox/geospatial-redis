@@ -1,0 +1,19 @@
+web:
+  image: nginx:latest
+  ports:
+    - "8080:80"
+  volumes:
+    - ./web:/code
+    - ./nginx.conf:/etc/nginx/conf.d/default.conf
+  links:
+    - php
+php:
+  build: .
+  dockerfile: php.Dockerfile
+  volumes:
+    - ./web:/code
+    - ./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+  links:
+    - redis
+redis:
+  image: redis:latest
