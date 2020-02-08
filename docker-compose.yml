@@ -15,5 +15,12 @@ php:
     - ./log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
   links:
     - redis
+    - db
+db:
+  image: mysql:latest
+  command: --default-authentication-plugin=mysql_native_password
+  restart: always
+  environment:
+    MYSQL_ROOT_PASSWORD: example
 redis:
   image: redis:latest

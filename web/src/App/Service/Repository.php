@@ -13,11 +13,17 @@ final class Repository
 
     private Cache $cache;
 
-    public function __construct(Cache $cache)
+    private Database $database;
+
+    public function __construct(Cache $cache, Database $database)
     {
         $this->cache = $cache;
+        $this->database = $database;
         if (!$this->cache->ping()) {
-          throw new Exception('Unable to connect to cache');
+            throw new Exception('Unable to connect to cache');
+        }
+        if (!$this->database->ping()) {
+            throw new Exception('Unable to connect to the DB');
         }
     }
 

@@ -11,6 +11,8 @@ use App\Factory\Handler\GetAll as GetAllHandlerFactory;
 use App\Factory\Handler\Add as AddHandlerFactory;
 use App\Service\Cache as CacheService;
 use App\Factory\Service\Cache as CacheServiceFactory;
+use App\Service\Database as DatabaseService;
+use App\Factory\Service\Database as DatabaseServiceFactory;
 use App\Service\Repository as RepositoryService;
 use App\Factory\Service\Repository as RepositoryServiceFactory;
 
@@ -49,6 +51,7 @@ class ConfigProvider
                 GetAllHandler::class      => GetAllHandlerFactory::class,
 
                 CacheService::class       => CacheServiceFactory::class,
+                DatabaseService::class    => DatabaseServiceFactory::class,
                 RepositoryService::class  => RepositoryServiceFactory::class
             ],
         ];
