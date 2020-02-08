@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "693191b8-9cb0-4bd4-81bb-4733ef498186",
+		"name": "Geospatial Redis thingy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.99.100:8080/?latitude=52.54321&longitude=1.23456&radius=15000",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8080",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "52.54321"
+						},
+						{
+							"key": "longitude",
+							"value": "1.23456"
+						},
+						{
+							"key": "radius",
+							"value": "15000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Hiriyu",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/javascript"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Hiriyu\",\n\t\"latitude\": 52.54321,\n\t\"longitude\": 1.23456\n}",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8080/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Pearl",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/javascript"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Pearl\",\n\t\"latitude\": 53.54321,\n\t\"longitude\": 12.23456\n}",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8080/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Midway",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/javascript"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Midway\",\n\t\"latitude\": 53.94321,\n\t\"longitude\": 13.23456\n}",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8080/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
